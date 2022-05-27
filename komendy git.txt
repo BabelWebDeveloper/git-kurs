@@ -1,0 +1,41 @@
+================================
+ls => pokazuje pliki jakie są dostępne
+ls -a => wraz z ukrytymi plikami
+git init => stworzenie repozytorium (jak jest w nawiasie nazwa gałęzi znaczy że jest utworzone, pojawia się w wybranym miejscu ukryty folder)
+
+git status => pokazuje status repo
+touch 1.txt => dodaje nowy plik edytowalny
+code . => otwarcie katalogu w VCS
+
+Z czego składa się repo:
+1. Working directory - katalog w którym pracujemy:
+- tracked - pliki widziane przez gita
+- untracked
+
+git add 1.txt => dodanie jednego pliku "untracked" do staging
+git add -A => dodanie wszystkich plików "untracked" do staging
+
+W working directory pojawią się również pliki wysłane do repo jeśli zostaną zmodyfikowane, wtedy trzeba je od nowa dodać do stagingu i zacommitować
+
+2. Staging area - katalog w kórym git widzi nasze pliki które mogą trafić do repo
+
+git commit -m"dodajemy pierwszy plik 1.txt" => dodanie pliku/plików do repo
+
+3.Commit area - pliki wysłane do repo
+
+git branch => wyświetlenie wszystkich branchy
+
+W razie jakby trzeba było się zalogować:
+git config --global user.name "Przemyslaw babel"
+git config --global user.email @email.com
+
+git log => historia commitów, wyjście z okna logów => q
+
+git commit -am"Dodajemy pliku do stagingu i odrazu do repo" => Dodanie pliku do stagingu i odrazu do repo
+
+git checkout -b"logowanie" => tworzenie nowego brancha, odrazu kopiuje wszystkie pliki z poprzedniego brancha
+
+git checkout master => przełączenie na branch master, jeśli coś commitowaliśmy na branchu logowanie to nie będą one widoczne w logach brancha master (chyba że wykonaliśmy git merge)
+
+git merge logowanie => przeniesienie zmian z branhu logowanie na branch master
+
